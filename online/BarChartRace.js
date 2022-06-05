@@ -1,4 +1,5 @@
-
+let previousYear = 0;
+let year = 1985;
 
 function BarChartRace(chartId, extendedSettings) {
     const chartSettings = {
@@ -18,6 +19,7 @@ function BarChartRace(chartId, extendedSettings) {
     chartSettings.innerHeight = chartSettings.height - chartSettings.padding * 2;
   
     const chartDataSets = [];
+    let year = 1983;
     let chartTransition;
     let timerStart, timerEnd;
     let currentDataSetIndex = 0;
@@ -99,7 +101,7 @@ function BarChartRace(chartId, extendedSettings) {
         .append("text")
         .attr("class", "column-title")
         .attr("y", 30) // (yAxisScale.step() * (1 - chartSettings.columnPadding)) / 2
-        .attr("x", -titlePadding+10)
+        .attr("x", -titlePadding+15)
         .text(({ school }) => school);
   
       barGroupsEnter
@@ -125,7 +127,9 @@ function BarChartRace(chartId, extendedSettings) {
       barUpdate
         .select(".column-title")
         .transition(transition)
-        .attr("x", ({ count }) => xAxisScale(count) - titlePadding);
+        .attr("x", ({ count }) => {
+          return xAxisScale(count) - titlePadding
+        });
   
       barUpdate
         .select(".column-count")
@@ -139,8 +143,22 @@ function BarChartRace(chartId, extendedSettings) {
   
           const interpolate = d3.interpolate(interpolateStartValue, count);
           this.currentValue = count;
+
+         
   
           return function(t) {
+            
+            //if(t>0.998){
+            //   year+=1;
+            //   d3.select("#date").html(year+t);
+            // }else{
+            //   d3.select("#date").html(year+t);
+            // }
+            if(previousYear>t){
+              year++;
+            }
+            previousYear = t;
+            d3.select("#date").html(year);
             d3.select(this).text(Math.ceil(interpolate(t)));
           };
         });
@@ -174,6 +192,7 @@ function BarChartRace(chartId, extendedSettings) {
           this.currentValue = 0;
   
           return function(t) {
+      
             d3.select(this).text(Math.ceil(interpolate(t)));
           };
         });

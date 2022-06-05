@@ -1,0 +1,40 @@
+main {
+    padding: 50px;
+}
+
+h1, p, h2, h3, a {
+
+    text-align: center;
+}
+
+h1, h2, h3{
+    
+    padding-bottom:35px;
+}
+h2{
+    padding-top: 30px;
+}
+#colleges {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#colleges div {
+    border: 1px solid black;
+    padding: 5px;
+    width: 180px;
+}
+#date {
+    font-size: 40px;
+
+}
+
+.section1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.barChartText {
+    padding-top: 300px;
+    padding-left: 100px;
+}

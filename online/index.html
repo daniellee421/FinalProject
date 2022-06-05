@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-        <script src="https://unpkg.com/p5.js-svg@1.3.1"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script> -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <meta charset="utf-8" />
-    <script
-      src="https://unpkg.com/d3@5.13.1/dist/d3.min.js"
-      
-    ></script>
-  </head>
-  <body>
-    <main></main>
-    <svg id="bar-chart-race">
-      <g class="chart-container">
-        <text class="chart-title"></text>
-        <g class="x-axis"></g>
-        <g class="y-axis"></g>
-        <g class="columns"></g>
-        <text class="current-date"></text>
-      </g>
-    </svg>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://unpkg.com/p5.js-svg@1.3.1"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script> -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <script src="https://unpkg.com/d3@5.13.1/dist/d3.min.js"></script>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <h1>The College Powerhouses</h1>
+    <p>The NBA, also know as the National Basketball Association, is a professional basketball league in North America. For any basketball player, they yearn and dream to step foot onto the court of the best basketball league in the world. From dazzling spin moves from Allen Iverson to hypnotic dribbling of Kyrie Irving, many put in countless hours of blood, sweat, and tears just to make the stage. However, most fail to. Because there are so many people who play basketball in the world, many talented players fail to make it to the league of 450 players because they lack of notice and recognition by recruits. But some do, through college basketball.</p>
+    <h2> Which College Send the Most Amount of Players to the NBA? </h2>
+    <p>College basketball is the most common recruitment site for the NBA. After a successful season or career, many college players receive the worldwide recognition of recruits and fans to be able to enter the NBA draft. Up to 6 million watching a game, tournaments such as the NCAA March Madness are extremely popular. March Madness became the United States’ number one sporting event among viewers. Thousands pay a hefty deal to stand amongst the crowds and cheer on their favorite team, while millions watch at home. Players who shine receive countless supporters and catch the eye of NBA recruiters. This lead to 85.5% of the entire NBA constituting players that played college basketball. But just like how there are better teams in the NBA, there are better college teams as well.</p>
+    <div class="section1">
+      <div>
+        <div id="date"></div>
+        <svg id="bar-chart-race">
+          <g class="chart-container">
+         
+            <g class="x-axis"></g>
+            <g class="y-axis"></g>
+            <g class="columns"></g>
+            <text class="current-date"></text>
+          </g>
+        </svg>
+      </div>
+      <div class="barChartText"> 
+        <h2>The Racing Bar Chart of College Powerhouses</h2>
+        <p>This racing bar chart of colleges demonstrates how many of their players get drafted into the NBA from 1985 to 2013. From 1985 to 1995, the University of North Carolina and Arizona were the two top schools with the highest number of NBA players. Arizona had 19 players in the league, while UNC just tailed behind at 18. From 1995 to 2005, UNC continued to lead with 29 players in the NBA. UCLA caught up into the race and tied in with UNC, also with a total of 29 players. Arizona went down a step to third place with a total of 28 players. But from 2005 to 2013, Kentucky, the world renown college basketball powerhouse led by Coach Calipari, claimed first place by a huge margin. They sent a total of 55 players to the NBA, 21 of their players being from 2005 to 2013. Duke, also famous for being the embodiment of a student-athlete school, sent a total of 46 players to the NBA led by Coach K. North Carolina continued to send many players tot he NBA despite falling to third place with a total of 42 players.</p>
+      </div>
+    </div>
+    <hr />
+    <h2>What is the Average Height and Weight of College Players in the NBA? How Does it Affect their Points, Assists, and Rebounds?</h2>
     <div id="dude"></div>
-    <!-- <script src="dataGenerator.js"></script> -->
-    <script src="BarChartRace.js"></script>
-    <script src="barChartSketch.js"></script>
-    <script src="dudeSketch.js"></script>
+    <div id="colleges"></div>
+    <hr />
+    <h3> Citations </h3>
+    <p><a href="https://www.kaggle.com/code/justinas/nba-height-and-weight-analysis/data?select=all_seasons.csv">Click Here!</a></p>
     
-  </body>
+  </main>
+
+
+
+  <!-- <script src="dataGenerator.js"></script> -->
+  <script src="BarChartRace.js"></script>
+  <script src="barChartSketch.js"></script>
+  <script src="dudeSketch.js"></script>
+
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
